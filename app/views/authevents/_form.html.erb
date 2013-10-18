@@ -1,0 +1,17 @@
+<%= form_for(@authevent) do |f| %>
+  <% if @authevent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@authevent.errors.count, "error") %> prohibited this authevent from being saved:</h2>
+
+      <ul>
+      <% @authevent.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

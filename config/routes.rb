@@ -1,4 +1,6 @@
 PRBNw::Application.routes.draw do
+  resources :authevents
+
   root to: 'welcome#index'
   get "welcome/index"
   devise_for :users
